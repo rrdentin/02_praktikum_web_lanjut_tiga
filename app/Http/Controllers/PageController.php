@@ -53,32 +53,30 @@ class PageController extends Controller
     //program page
     function program(){
         echo "<h2>This is our program keyword:</h2>
-            <ul>w
+            <ul>
                 <li><a href='http://localhost:8000/program/karir'>karir</a></li>
                 <li><a href='http://localhost:8000/program/magang'>magang</a></li>
                 <li><a href='http://localhost:8000/program/kunjungan-industri'>kunjungan-industri</a></li>
             </ul>";
     }
 
-    function karir(){
-        echo "<h2>Karir</h2>";
-        echo "<ul><li><a href='https://www.educastudio.com/program/karir'>karir di sini</a></li>";
+    public function karir(){
+        return redirect()->to('https://www.educastudio.com/program/karir');
     }
 
-    function magang(){
-        echo "<h2>Magang</h2>";
-        echo "<ul><li><a href='https://www.educastudio.com/program/magang'>magang di sini</a></li>";
+    public function magang(){
+        return redirect()->to('https://www.educastudio.com/program/magang');
     }
-
-    function industri(){
-        echo "<h2>Kunjungan Industri</h2>";
-        echo "<ul><li><a href='https://www.educastudio.com/program/kunjungan-industri'>kunjungan-industri di sini</a></li>";
+    
+    public function industri(){
+        return redirect()->to('https://www.educastudio.com/program/kunjungan-industri');
     }
+    
 
 
     //About page
     function about(){
-        return "This is about page";
+        return redirect()->to('https://www.educastudio.com/about-us');
     }
 
 
